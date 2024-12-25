@@ -1,0 +1,40 @@
+$dot-cont:3;
+$dot-sise:20px;
+$dot-spacing:10px;
+$animation-duration:1s;
+$animation-delay:0.2s;
+
+
+
+.loader{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @for $i from 1 through 3{
+        $delay :$i*$animation-delay;
+
+        &__dot:nth-child(#{$i}){
+            width: $dot-sise;
+            height: $dot-sise;
+            background-color: #333;
+            border-radius: 50%;
+            margin: 0px $dot-spacing/2;
+
+            animation: blink-animation $animation-duration infinite alternate ;
+            animation-delay: $delay;
+        }
+
+
+    }
+
+
+}
+
+@keyframes blink-animation{
+    to{
+        opacity: 0;
+    }
+}
+

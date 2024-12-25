@@ -1,0 +1,57 @@
+
+$color: dark;
+
+body{
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+    &.dark-theme{
+        background-color: #333;
+        color: white;
+    }
+
+    &.light-theme{
+        background-color: #fff;
+        color: #333;
+
+    }
+
+    
+}
+
+
+.title{
+    text-align: center;
+    font-weight: bold;
+}
+
+.content{
+    text-align: center;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+
+#theme-bouton{
+    margin-top: 20px;
+    padding: 5px 15px;
+}
+
+@if($color == dark){
+    body{
+        background-color: #333;
+        color: white;
+    }
+}
+@else{
+    body{
+        background-color: white;
+        color: #333;
+    }
+}
+
+
